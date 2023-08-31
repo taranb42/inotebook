@@ -137,7 +137,7 @@ const Register = () => {
 
                   <p class="mt-4 text-sm text-gray-500 sm:mt-0">
                     Already have an account?
-                    <a href="#" class="text-gray-700 underline">
+                    <a href="/Login" class="text-gray-700 underline">
                       Log in
                     </a>
                     .

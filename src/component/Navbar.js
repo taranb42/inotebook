@@ -37,9 +37,9 @@ const Navbar = () => {
           </li>
 
           <li>
-            <a class="text-gray-500 transition hover:text-gray-500/75" href="/">
-              Projects
-            </a>
+            <Link class="text-gray-500 transition hover:text-gray-500/75" to="/Projects">
+            Projects
+            </Link>
           </li>
 
           <li>
@@ -52,9 +52,9 @@ const Navbar = () => {
 
       <div class="flex items-center gap-4">
         <div class="sm:flex sm:gap-4">
-          <a
-            class="block rounded-md bg-blue-600 px-5 py-2.5 text-sm font-medium text-white transition blue:bg-teal-700"
-            href="/"
+        <a
+            class="hidden rounded-md bg-gray-100 px-5 py-2.5 text-sm font-medium text-blue-600 transition blue:text-teal-600/75 sm:block"
+            href="/Login"
           >
             Login
           </a>

@@ -7,6 +7,8 @@ import About from "./component/About";
 import Footer from "./component/Footer";
 import Home from "./component/Home";
 import Faq from "./component/Faq.js";
+import Projects from "./component/Projects";
+import Login from "./component/Login";
 
 function App() {
   return (
@@ -23,6 +25,7 @@ function App() {
                 </>
               }
             />
+            ````````````````````
             <Route exact path="/Register" element={<Register />} />
             <Route
               path="/About"
@@ -30,6 +33,17 @@ function App() {
                 <>
                   {" "}
                   <Navbar /> <About /> <Footer />{" "}
+                </>
+              }
+            />
+            <Route exact path="/Login" element={<Login />} />            
+            <Route exact path="/Projects" element={<Projects />} />
+            <Route
+              path="/Projects"
+              element={
+                <>
+                  {" "}
+                  <Navbar /> <Projects /> <Footer />{" "}
                 </>
               }
             />

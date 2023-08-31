@@ -1,4 +1,5 @@
 import React from "react";
+import Register from "./Register";
 
 const Home = () => {
   return (
@@ -29,7 +30,7 @@ const Home = () => {
                     <a
                       href="https://www.rsystems.com/digital-platforms-and-solutions/"
                       target="blank"
-                      class="mt-8 inline-block rounded bg-blue-600 px-12 py-3 text-sm font-medium text-white transition blue:bg-indigo-700 focus:outline-white focus:ring focus:ring-yellow-400"
+                      class="mt-8 inline-block rounded bg-blue-600 px-12 py-3 text-sm font-medium text-white transition white:bg-indigo-700 focus:outline-white focus:ring focus:ring-yellow-400"
                     >
                       Get Connected Today
                     </a>
@@ -40,13 +41,13 @@ const Home = () => {
               <div class="grid grid-cols-2 gap-4 md:grid-cols-1 lg:grid-cols-2">
                 <img
                   alt="Student"
-                  src="https://images.unsplash.com/photo-1621274790572-7c32596bc67f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=654&q=80"
+                  src="/logo11.png"
                   class="h-40 w-full object-cover sm:h-56 md:h-full"
                 />
 
                 <img
                   alt="Student"
-                  src="https://images.unsplash.com/photo-1567168544813-cc03465b4fa8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+                  src="/logo10.png"
                   class="h-40 w-full object-cover sm:h-56 md:h-full"
                 />
               </div>
@@ -57,14 +58,14 @@ const Home = () => {
           <div class="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16">
             <div class="relative h-64 overflow-hidden rounded-lg sm:h-80 lg:order-last lg:h-full">
               <img
-                alt="Party"
-                src="https://images.unsplash.com/photo-1527529482837-4698179dc6ce?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+                alt="meeting"
+                src="/1200pxTCSSIPCOTBuilding.jpg"
                 class="absolute inset-0 h-full w-full object-cover"
               />
             </div>
 
             <div class="lg:py-24">
-              <h2 class="text-3xl font-bold sm:text-4xl">Grow your audience</h2>
+              <h2 class="text-3xl font-bold sm:text-4xl">Grow your Business</h2>  
 
               <p class="mt-4 text-gray-600">
                 Our full-lifecycle Digital Product Engineering services employ
@@ -76,10 +77,10 @@ const Home = () => {
               </p>
 
               <a
-                href="#"
+                href="/Register"
                 class="mt-8 inline-block rounded bg-blue-600 px-12 py-3 text-sm font-medium text-white transition blue:bg-indigo-700 focus:outline-none focus:ring focus:ring-yellow-400"
               >
-                Get Started Today
+                Register With UserEmail
               </a>
             </div>
           </div>
