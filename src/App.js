@@ -9,11 +9,13 @@ import Home from "./component/Home";
 import Faq from "./component/Faq.js";
 import Projects from "./component/Projects";
 import Login from "./component/Login";
+import { HomeContext } from "./services/HomeContext";
 
 function App() {
   return (
     <>
       <noteState>
+        <HomeContext>
         <BrowserRouter>
           <Routes>
             <Route
@@ -37,7 +39,6 @@ function App() {
               }
             />
             <Route exact path="/Login" element={<Login />} />            
-            <Route exact path="/Projects" element={<Projects />} />
             <Route
               path="/Projects"
               element={
@@ -67,6 +68,7 @@ function App() {
             />
           </Routes>
         </BrowserRouter>
+        </HomeContext>
       </noteState>
     </>
   );

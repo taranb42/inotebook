@@ -11,7 +11,7 @@ const Home = () => {
               <div class="bg-blue-600 p-8 md:p-12 lg:px-16 lg:py-24">
                 <div class="mx-auto max-w-xl text-center">
                   <h2 class="text-2xl font-bold text-white md:text-3xl">
-                    R Systems’ mission is to enable digital innovation for
+                    R Systems mission is to enable digital innovation for
                     enterprises in the Banking, Finance & Insurance industry.
                   </h2>
 
@@ -40,13 +40,13 @@ const Home = () => {
 
               <div class="grid grid-cols-2 gap-4 md:grid-cols-1 lg:grid-cols-2">
                 <img
-                  alt="Student"
+                  alt="RSYSTEMS"
                   src="/logo11.png"
                   class="h-40 w-full object-cover sm:h-56 md:h-full"
                 />
 
                 <img
-                  alt="Student"
+                  alt="RSYSTEMS"
                   src="/logo10.png"
                   class="h-40 w-full object-cover sm:h-56 md:h-full"
                 />
@@ -54,8 +54,8 @@ const Home = () => {
             </div>
           </div>
         </section>
-        <div class="mx-auto max-w-screen-xl px-4 py-8 sm:py-12 sm:px-6 lg:py-16 lg:px-8">
-          <div class="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16">
+        <div class="mx-auto max-w-screen-xl px-4 py-8 sm:py-12 sm:px-6 lg:py-8 lg:px-8">
+          <div class="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-8">
             <div class="relative h-64 overflow-hidden rounded-lg sm:h-80 lg:order-last lg:h-full">
               <img
                 alt="meeting"
@@ -80,7 +80,7 @@ const Home = () => {
                 href="/Register"
                 class="mt-8 inline-block rounded bg-blue-600 px-12 py-3 text-sm font-medium text-white transition blue:bg-indigo-700 focus:outline-none focus:ring focus:ring-yellow-400"
               >
-                Register With UserEmail
+                Register With Us
               </a>
             </div>
           </div>

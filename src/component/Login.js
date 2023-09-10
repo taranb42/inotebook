@@ -1,20 +1,52 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useContext, useEffect, useState } from "react";
+import { Link, json } from "react-router-dom";
 import Register from "./Register";
+import { HomeContextAPI } from "../services/HomeContext";
 
 const Login = () => {
+  const [data, setData] = useState({
+    email: "",
+    password: "",
+  });
+
+  const { login } = useContext(HomeContextAPI);
+
+  const handleChange = (event) => {
+    setData({ ...data, [event.target.name]: event.target.value });
+  };
+
+  const loginuser = async (event) => {
+    event.preventDefault();
+
+    const Json = await login(data.email, data.password);
+    console.log(Json);
+  };
+
+  //   useEffect(() => {
+
+  // console.log(data)
+  //   }, [data]);
+
   return (
     <>
       <section class="relative flex flex-wrap lg:h-screen lg:items-center">
         <div class="w-full px-4 py-12 sm:px-6 sm:py-16 lg:w-1/2 lg:px-8 lg:py-24">
           <div class="mx-auto max-w-lg text-center">
-            <img src="/logo1.png" />
+            <a class="block blue-teal-600" href="/">
+              <span class="sr-only">Home</span>
+              <img src="/logo1.png" />
+            </a>
             <h1 class="text-4xl font-bold sm:text-5xl">Get started today!</h1>
 
-            <p class="text-2xl mt-4 text-blue-500">Simple, Scalable and Serverless</p>
+            <p class="text-2xl mt-4 text-blue-500">
+              Simple, Scalable and Serverless
+            </p>
           </div>
 
-          <form action="" class="mx-auto mb-0 mt-8 max-w-md space-y-4">
+          <form
+            onSubmit={loginuser}
+            class="mx-auto mb-0 mt-8 max-w-md space-y-4"
+          >
             <div>
               <label for="email" class="sr-only">
                 Email
@@ -23,6 +55,8 @@ const Login = () => {
               <div class="relative">
                 <input
                   type="email"
+                  name="email"
+                  onChange={handleChange}
                   class="w-full rounded-lg border-white-200 p-4 pe-12 text-sm shadow-sm"
                   placeholder="Email"
                 />
@@ -54,6 +88,8 @@ const Login = () => {
               <div class="relative">
                 <input
                   type="password"
+                  name="password"
+                  onChange={handleChange}
                   class="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm"
                   placeholder="Password"
                 />

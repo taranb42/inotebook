@@ -1,6 +1,32 @@
-import React from "react";
+import React, { useContext, useState } from "react";
+import { HomeContextAPI } from "../services/HomeContext";
+
 
 const Register = () => {
+
+  const [data, setData] = useState({
+    firstname: "",
+    lastname: "",
+    email: "",
+    password: "",
+  });
+
+  const { CreateAccount } = useContext(HomeContextAPI);
+
+  const handleChange = (event) => {
+    setData({ ...data, [event.target.name]: event.target.value });
+  };
+
+const createuseraccount = async (event) => {
+  event.preventDefault();
+
+  const Json = await CreateAccount( data.firstname,data.lastname,data.email,data.password)
+  console.log(Json);
+};
+
+
+
+
   return (
     <>
       <section class="bg-white">
@@ -35,19 +61,35 @@ const Register = () => {
                 overcome digital barriers
               </p>
 
-              <form action="#" class="mt-8 grid grid-cols-6 gap-6">
-                <div class="col-span-6 sm:col-span-3">
-                  <label
-                    for="Name"
-                    class="block text-sm font-medium text-gray-700"
-                  >
-                    Name
+              <form onSubmit={createuseraccount} class="mt-8 grid grid-cols-6 gap-6">
+          <div class="col-span-6 sm:col-span-3">
+            <label
+              for="FirstName"
+              class="block text-sm font-medium text-gray-700"                  >
+                    First Name
                   </label>
 
                   <input
                     type="text"
                     id="Name"
-                    name="name"
+                    name="firstname"
+                    onChange={handleChange}
+                    class="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
+                  />
+                </div>
+                <div class="col-span-6 sm:col-span-3">
+                  <label
+                    for="Name"
+                    class="block text-sm font-medium text-gray-700"
+                  >
+                  Last Name
+                  </label>
+
+                  <input
+                    type="text"
+                    id="Name"
+                    name="lastname"
+                    onChange={handleChange}
                     class="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
                   />
                 </div>
@@ -64,6 +106,7 @@ const Register = () => {
                     type="email"
                     id="Email"
                     name="email"
+                    onChange={handleChange}
                     class="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
                   />
                 </div>
@@ -80,25 +123,12 @@ const Register = () => {
                     type="password"
                     id="Password"
                     name="password"
+                    onChange={handleChange}
                     class="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
                   />
                 </div>
 
-                <div class="col-span-6 sm:col-span-3">
-                  <label
-                    for="PasswordConfirmation"
-                    class="block text-sm font-medium text-gray-700"
-                  >
-                    Password Confirmation
-                  </label>
 
-                  <input
-                    type="password"
-                    id="PasswordConfirmation"
-                    name="password_confirmation"
-                    class="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
-                  />
-                </div>
 
                 <div class="col-span-6">
                   <label for="MarketingAccept" class="flex gap-4">
